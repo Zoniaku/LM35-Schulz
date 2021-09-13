@@ -1,0 +1,18 @@
+ float v = 0.0;
+float T=0.0;
+void setup() {
+ 
+  // put your setup code here, to run once:
+pinMode(A0,INPUT);
+Serial.begin(9600);
+}
+
+void loop() {
+  delay(500);
+  v=analogRead(A0);
+  T = ((v*125)/1023);
+  // put your main code here, to run repeatedly:
+Serial.print("temperatura es: ");
+Serial.println(T);
+delay(1000);
+}
